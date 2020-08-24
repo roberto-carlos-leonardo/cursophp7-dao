@@ -27,13 +27,29 @@ $search = Usuario::search("ser");
 echo json_encode($search);
 */
 
-// carrega um usuario usando o login e a senha
-
+/* carrega um usuario usando o login e a senha
 $usuario = new Usuario();
 $usuario->login("user","12345");
 echo $usuario;
+*/
+
+/* chamando insert sem a função contrutor 
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("aluno");
+$aluno->insert();
+echo $aluno;
+*/
+/* chamando insert com a função contrutor 
+$aluno = new Usuario("aaaa","bbbb");
+$aluno->insert();
+echo $aluno;
+*/
+
+
+$usuario = new Usuario();
+$usuario->loadbyId(12);
+$usuario->update("teste","testado");
+echo $usuario;
 
 ?>
-
-
-
