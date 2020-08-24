@@ -46,10 +46,16 @@ $aluno->insert();
 echo $aluno;
 */
 
-
+/* alterar usuario
 $usuario = new Usuario();
 $usuario->loadbyId(12);
 $usuario->update("teste","testado");
+echo $usuario;
+*/
+
+$usuario = new Usuario();
+$usuario->loadbyId(12);
+$usuario->delete();
 echo $usuario;
 
 ?>
